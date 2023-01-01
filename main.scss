@@ -1,0 +1,324 @@
+
+/************************************** COLORS ****************************************/
+
+$color-red-bright: hsl(12, 88%, 59%);
+$color-blue-light: hsl(228, 39%, 23%);
+$color-blue-greyish: hsl(227, 12%, 61%);
+$color-blue-dark: hsl(233, 12%, 13%);
+$color-red-pale: hsl(13, 100%, 96%);
+$color-grey-light: hsl(0, 0%, 98%);
+$color-white: #fff;
+
+/************************************** FONTS ****************************************/
+
+$font-primary:'Be Vietnam', sans-serif;
+
+/************************************** Default Styling ****************************************/
+h1,h2,h3,h4,h5{
+    color: $color-blue-light;
+}
+
+p{
+    color: $color-blue-greyish;
+    font-weight: 400;
+}
+ul{
+    list-style: none
+}
+a{
+    text-decoration: none;
+    color: $color-blue-light;
+}
+/************************************** For centering our content within 1140 px ****************************************/
+.row{
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+/************************************** UNIVERSAL RESET ****************************************/
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%; //which is 10px
+    box-sizing: border-box;
+}
+body{
+    font-family: $font-primary;
+    font-weight: 400;
+    color: $color-blue-greyish;
+    line-height: 1.6;
+}
+
+/************************************** Header starts here ****************************************/
+
+.header{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    &:before{
+        content: '';
+        background-image: url(../images/bg-tablet-pattern.svg);
+        background-size: cover;
+        background-position: right;
+        width: 75rem;
+        height: 75rem;
+        position: absolute;
+        top: -20rem;
+        right: -15rem;
+        z-index: -1;
+    }
+    &__flex{
+        display: flex;
+        align-items: center;
+    }
+    &__content{
+        flex: 0 0 50%;
+    }
+    &__photo{
+        flex: 0 0 50%;
+        transform: translateY(6rem);
+    }
+    &__textbox{
+        transform: translateY(5rem);
+        & *:not(:last-child){
+            margin-bottom: 3.5rem;
+        }
+    }
+    &__text{
+        font-size: 1.5rem;
+    }
+    &__img{
+        width: 100%;
+    }
+}
+.heading-primary{
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+.btn:link,
+.btn:visited{
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-weight: 700;
+    
+}
+.btn__red{
+    background-color: $color-red-bright;
+    border-radius: 10rem;
+    color: $color-grey-light;
+}
+.nav{
+    padding: 3rem 0;
+    &__flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__list{
+        display: flex;
+        & *:not(last-child){
+            margin-right: 2rem;
+        }
+    }
+    &__link:visited,
+    &__link:link{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    &__link:hover{
+        color: $color-red-bright;
+        transition: all .2s;
+    }
+}
+
+/************************************** Header ends here ****************************************/
+
+/************************************** About section starts here ****************************************/
+.about{
+    padding: 10rem 0;
+    position: relative;
+    &:before{
+        content: ' ';
+        position: absolute;
+        background-image: url(../images/bg-tablet-pattern.svg);
+        background-size: cover;
+        background-position: left;
+        width: 60rem;
+        height: 60rem;
+        bottom: -30rem;
+        left: -30rem;
+        z-index: -1;
+    }
+    padding: 10rem 0;
+    &__flex{
+        display: flex;
+    }
+    &__left{
+        flex: 0 0 50%;
+        & *:not(:last-child){
+            margin-bottom: 3rem;
+        }
+        &--text{
+            font-size: 1.5rem;
+        }
+    }
+    &__right{
+        flex: 0 0 50%;
+        &--flex{
+            & *:not(:last-child){
+                margin-bottom: 2rem;
+            }
+        }
+        &--grid{
+            display: grid;
+            grid-template-columns: min-content minmax(min-content, 1fr);
+            grid-template-rows: repeat(2, min-content);
+            grid-gap: 2rem;
+            align-items: flex-start;
+        }
+        &--number{
+            display: inline-block;
+            padding: .8rem 2.5rem;
+            background-color: $color-red-bright;
+            color: $color-grey-light;
+            font-size: 1.2rem;
+            border-radius: 10rem;
+            grid-row: 1 / -1;
+        }
+        &--text{
+            font-size: 1.5rem;
+            transform: translateY(-3rem);
+        }
+    }
+}
+.heading-secondary{
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+    
+}
+.heading-tertiary{
+    font-size: 1.7rem;
+}
+/************************************** About section ends here ****************************************/
+
+/************************************** Testimonials section starts here ****************************************/
+.testimonials{
+    padding: 10rem 0;
+    text-align: center;
+   
+   &__grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-gap: 5rem;
+    
+   }
+   &__item{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       margin: 5rem .5rem;
+       padding: 1rem 3rem;
+       & *:not(:last-child){
+           margin-bottom: 1.5rem;
+       }
+       
+       &--img{
+           height: 8rem;
+           
+       }
+       &--text{
+        text-align: center;
+        font-size: 1.5rem;
+       }
+   }
+   
+}
+/************************************** Testimonials section ends here ****************************************/
+
+/************************************** simply section starts here ****************************************/
+.simply{
+    background-color: $color-red-bright;
+    &__flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5rem 0;
+    }
+}
+.heading-4{
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: $color-grey-light;
+}
+.btn{
+    &__white{
+        background-color: $color-grey-light;
+        border-radius: 10rem;
+        color: $color-red-bright;
+    }
+}
+
+/************************************** simply section ends here ****************************************/
+
+/*********************************** footer starts here***************************************/
+.footer{
+    background-color: $color-blue-dark;
+    padding: 5rem 0;
+    &__flex{
+        display: flex;
+        align-items: center;
+    }
+    &__logo{
+        background-color: $color-white;
+        height: 3rem;
+        margin-bottom: 5rem;
+    }
+    &__logo-icons{
+        flex: 0 0 20%;
+        font-size: 2rem;
+        color: $color-white;
+        cursor: pointer;
+        & > * :hover{
+            color: $color-red-bright;
+        }
+    }
+    &__nav{
+        flex: 0 0 20%;
+        &--list{
+            list-style: none;
+        }
+        &--item{
+            &:not(last-child){
+                margin-bottom: 1.5rem;
+            }
+        }
+        &--link:link,
+        &--link:visited{
+            text-decoration: none;
+            color: $color-white;
+            font-size: 1.5rem;
+            &:hover{
+                color: $color-red-bright;
+            }
+            
+        }
+    }
+    &__copyright{
+        flex: 1;
+        text-align: right;
+        &--text{
+            margin-top: 3rem;
+            font-size: 1.5rem;
+        }
+    }
+}
+/*********************************** footer ends here***************************************/

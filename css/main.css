@@ -1,0 +1,407 @@
+/************************************** COLORS ****************************************/
+/************************************** FONTS ****************************************/
+/************************************** Default Styling ****************************************/
+h1, h2, h3, h4, h5 {
+  color: #242d52;
+}
+
+p {
+  color: #9095a7;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #242d52;
+}
+
+/************************************** For centering our content within 1140 px ****************************************/
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+/************************************** UNIVERSAL RESET ****************************************/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Be Vietnam", sans-serif;
+  font-weight: 400;
+  color: #9095a7;
+  line-height: 1.6;
+}
+
+/************************************** Header starts here ****************************************/
+.header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header:before {
+  content: '';
+  background-image: url(../images/bg-tablet-pattern.svg);
+  background-size: cover;
+  background-position: right;
+  width: 75rem;
+  height: 75rem;
+  position: absolute;
+  top: -20rem;
+  right: -15rem;
+  z-index: -1;
+}
+
+.header__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.header__photo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  -webkit-transform: translateY(6rem);
+          transform: translateY(6rem);
+}
+
+.header__textbox {
+  -webkit-transform: translateY(5rem);
+          transform: translateY(5rem);
+}
+
+.header__textbox *:not(:last-child) {
+  margin-bottom: 3.5rem;
+}
+
+.header__text {
+  font-size: 1.5rem;
+}
+
+.header__img {
+  width: 100%;
+}
+
+.heading-primary {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.btn:link,
+.btn:visited {
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-weight: 700;
+}
+
+.btn__red {
+  background-color: #f25f3a;
+  border-radius: 10rem;
+  color: #fafafa;
+}
+
+.nav {
+  padding: 3rem 0;
+}
+
+.nav__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__list *:not(last-child) {
+  margin-right: 2rem;
+}
+
+.nav__link:visited, .nav__link:link {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.nav__link:hover {
+  color: #f25f3a;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+/************************************** Header ends here ****************************************/
+/************************************** About section starts here ****************************************/
+.about {
+  padding: 10rem 0;
+  position: relative;
+  padding: 10rem 0;
+}
+
+.about:before {
+  content: ' ';
+  position: absolute;
+  background-image: url(../images/bg-tablet-pattern.svg);
+  background-size: cover;
+  background-position: left;
+  width: 60rem;
+  height: 60rem;
+  bottom: -30rem;
+  left: -30rem;
+  z-index: -1;
+}
+
+.about__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__left {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.about__left *:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.about__left--text {
+  font-size: 1.5rem;
+}
+
+.about__right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.about__right--flex *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.about__right--grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: min-content minmax(min-content, 1fr);
+      grid-template-columns: -webkit-min-content minmax(-webkit-min-content, 1fr);
+      grid-template-columns: min-content minmax(min-content, 1fr);
+  -ms-grid-rows: (min-content)[2];
+      grid-template-rows: repeat(2, -webkit-min-content);
+      grid-template-rows: repeat(2, min-content);
+  grid-gap: 2rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.about__right--number {
+  display: inline-block;
+  padding: .8rem 2.5rem;
+  background-color: #f25f3a;
+  color: #fafafa;
+  font-size: 1.2rem;
+  border-radius: 10rem;
+  grid-row: 1 / -1;
+}
+
+.about__right--text {
+  font-size: 1.5rem;
+  -webkit-transform: translateY(-3rem);
+          transform: translateY(-3rem);
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.heading-tertiary {
+  font-size: 1.7rem;
+}
+
+/************************************** About section ends here ****************************************/
+/************************************** Testimonials section starts here ****************************************/
+.testimonials {
+  padding: 10rem 0;
+  text-align: center;
+}
+
+.testimonials__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(35rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-gap: 5rem;
+}
+
+.testimonials__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5rem .5rem;
+  padding: 1rem 3rem;
+}
+
+.testimonials__item *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.testimonials__item--img {
+  height: 8rem;
+}
+
+.testimonials__item--text {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/************************************** Testimonials section ends here ****************************************/
+/************************************** simply section starts here ****************************************/
+.simply {
+  background-color: #f25f3a;
+}
+
+.simply__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5rem 0;
+}
+
+.heading-4 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fafafa;
+}
+
+.btn__white {
+  background-color: #fafafa;
+  border-radius: 10rem;
+  color: #f25f3a;
+}
+
+/************************************** simply section ends here ****************************************/
+/*********************************** footer starts here***************************************/
+.footer {
+  background-color: #1d1e25;
+  padding: 5rem 0;
+}
+
+.footer__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__logo {
+  background-color: #fff;
+  height: 3rem;
+  margin-bottom: 5rem;
+}
+
+.footer__logo-icons {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer__logo-icons > * :hover {
+  color: #f25f3a;
+}
+
+.footer__nav {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+}
+
+.footer__nav--list {
+  list-style: none;
+}
+
+.footer__nav--item:not(last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.footer__nav--link:link, .footer__nav--link:visited {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.footer__nav--link:link:hover, .footer__nav--link:visited:hover {
+  color: #f25f3a;
+}
+
+.footer__copyright {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+}
+
+.footer__copyright--text {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+}
+
+/*********************************** footer ends here***************************************/
+/*# sourceMappingURL=main.css.map */
